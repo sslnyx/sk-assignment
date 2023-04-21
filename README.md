@@ -1,4 +1,4 @@
-# JSONPlaceholder React App
+# SK JSONPlaceholder React App
 
 This is a simple app that allows users to browse posts fetched from the JSONPlaceholder API and paginate through them.
 
@@ -43,6 +43,4 @@ Contributions are always welcome! If you'd like to contribute to this project, p
 
 ## License
 
-This project is licensed under the MIT License.```
-
-Of course, you should customize this README to fit the specific details of your app.
+This project is licensed under the MIT License.
