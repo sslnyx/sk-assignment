@@ -2,10 +2,10 @@
 
 @layer base {
     .app {
-        @apply flex flex-col items-center p-10 max-h-[700px] h-screen
+        @apply flex flex-col items-center px-3 py-5 max-h-screen
     }
 
     main {
-        @apply w-[420px] flex-1 mb-5
+        @apply w-[420px] max-w-full flex-1 mb-5
     }
 }

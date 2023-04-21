@@ -2,7 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer className='pb-5 text-primary'>
+      <small>Designed & built by Ning Yu Luo</small>
+    </footer>
   )
 }
 
