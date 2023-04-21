@@ -18,7 +18,11 @@ const SinglePost = () => {
           <h1>
             #{post.id} {post.title}
           </h1>
-          <p>{post.body}</p>
+          <p className="p-3">{post.body}</p>
+          <div>
+            <h6 className="inline-block">Author: </h6>
+            <span> {post.userId}</span>
+          </div>
         </div>
       )}
     </div>
