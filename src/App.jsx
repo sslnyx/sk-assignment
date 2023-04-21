@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import Header from "./components/header";
 import Footer from "./components/Footer";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import useFetch from "./hooks/useFetch";
 import usePagination from "./hooks/usePagination";
 
@@ -14,6 +14,7 @@ function App() {
   const init = useRef(false);
 
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   const props = {
     posts,
@@ -28,7 +29,7 @@ function App() {
   useEffect(() => {
     if (posts[currentPage]) return; // if post already exist return
     fetchPosts(currentPage);
-    navigate("posts");
+    if (!pathname.includes("posts")) navigate("posts");
   }, [currentPage]);
 
   return (

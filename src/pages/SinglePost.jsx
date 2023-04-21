@@ -13,7 +13,8 @@ const SinglePost = () => {
 
   return (
     <div className="single-Post rounded-lg border-primary border-4 p-5 text-center">
-      {post && (
+      {post && Object.keys(post).length === 0 && <span className="text-potato-500">post not found</span>}
+      {post && Object.keys(post)?.length > 0 && (
         <div>
           <h1>
             #{post.id} {post.title}
