@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, createHashRouter } from "react-router-dom";
 
 import App from "./App.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
@@ -9,10 +9,10 @@ import SinglePost from "./pages/SinglePost.jsx";
 
 import "./index.css";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
-      path: "/",
+      path: "",
       element: <App />,
       errorElement: <ErrorPage />,
       children: [
@@ -26,10 +26,7 @@ const router = createBrowserRouter(
         },
       ],
     }
-  ],
-  {
-    basename: "/sk-assignment",
-  }
+  ]
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
